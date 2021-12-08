@@ -8,7 +8,21 @@ public class FriendApp {
 
 		System.out.println("친구를 3명 등록해 주세요");
 		Scanner sc = new Scanner(System.in);
+		Friend[] fArray = new Friend[3];//Friend객체를 넣어줄 Friend배열 만들기
+		//String[] friend = new String[3];
+		//String[] fArray = friend.split(" ");
+
+		for(int i=0; i<fArray.length; i++){
+			String info=sc.nextLine();
+			String sArray[]=info.split(" ");
+			fArray[i]= new Friend(sArray[0],sArray[1],sArray[2]);
+		}
+
+		fArray[0].showInfo(); 
+		fArray[1].showInfo(); 
+		fArray[2].showInfo(); 
 		
+		/*
 		String Woo = sc.nextLine();
 		String[] wArray = Woo.split(" ");
 		
@@ -27,6 +41,12 @@ public class FriendApp {
 	    W.showInfo();
 	    L.showInfo();
 	    J.showInfo();
+	    */
+		/*
+	    Friend f = new Friend();
+	    Friend f1;
+	    f1 = new Friend();
+	    */
 	}
 
 }
